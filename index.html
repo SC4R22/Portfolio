@@ -4,12 +4,12 @@
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> CGC </title>
+    <title>CGC</title>
     <link rel="icon" href="imgs/cgc.jpeg">
 </head>
 <body>
     <header>
-        <img src="imgs/CGC_BANNER.webp" alt="">
+        <img src="imgs/CGC_BANNER.webp" alt="" id="banner">
     </header>
 
     <nav>
@@ -20,25 +20,40 @@
 
     <main>
         <h2 id="about-us">About Us</h2>
-        <p>Code Guard Creations is a small collective of software developers who decided to band together to create <br> 
+        <p>Code Guard Creations is a small collective of software developers who decided to band together to create
             something truly fantastical in the realm of software engineering.</p>
 
-        <p>Through our copywriter, we draft the skeleton of the website/app and send it to our front-end developers, <br>
-            who envision it and transform it into masterfully crafted code. Meanwhile,the back-end developers work <br> 
-            to ensure the Preformance and security of the website. </p>
+        <p>Through our copywriter, we draft the skeleton of the website/app and send it to our front-end developers,
+            who envision it and transform it into masterfully crafted code. Meanwhile, the back-end developers work
+            to ensure the performance and security of the website.</p>
 
         <h3 id="projects">Projects</h3>
-        <p> coming soon </p>
+        <p>coming soon</p>
     </main>
+    
     <div id="packages">
-    <h2>Packages</h2>
-    <p>At Code Guard Creations, we offer a variety of packages tailored to meet your needs.<br>
-         Choose from our range of options and find the perfect solution for you! </p>
+        <h2>Packages</h2>
+        <p>At Code Guard Creations, we offer a variety of packages tailored to meet your needs.
+            Choose from our range of options and find the perfect solution for you!</p>
     </div>
-    <!-- apply begin-->
-    <div class="center">
-        <button id="applyButton">Apply For Package</button>
+
+    <!-- Apply buttons begin -->
+    <div class="apply-container">
+        <div class="apply-item">
+            <img src="imgs/cgc.jpeg" alt="Package 1">
+            <button class="applyButton">Apply For Package 1</button>
+        </div>
+        <div class="apply-item">
+            <img src="imgs/cgc.jpeg" alt="Package 2">
+            <button class="applyButton">Apply For Package 2</button>
+        </div>
+        <div class="apply-item">
+            <img src="imgs/cgc.jpeg" alt="Package 3">
+            <button class="applyButton">Apply For Package 3</button>
+        </div>
     </div>
+    <!-- Apply buttons end -->
+
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -46,60 +61,24 @@
                 <label for="nameInput">Name:</label>
                 <input type="text" name="type-name" class="input" pattern="[a-z]+" id="nameInput">
                 <br>
-        
+
                 <label for="phone-number">Number:</label>
                 <input type="number" name="type-number" class="input">
                 <br>
-        
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" class="input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                 <br>
-        
+
                 <input type="submit" onclick="showPopup()" value="Submit">
             </form>
         </div>
     </div>
-    <!-- apply end -->
-   
     
     <footer>
         <h2>Contacts</h2>
-        <p>Email:</p>    <p>instagram:</p>
-        <p>Whatsapp:</p>
-      
+        <p>Email:</p> <p>Instagram:</p> <p>Whatsapp:</p>
     </footer>
+    <script src="script.js"></script>
 </body>
-<script>
-      // Get the modal
-      var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("applyButton");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// Show popup function (optional if you want to do something else on submit)
-function showPopup() {
-    var name = document.getElementById('nameInput').value;
-    alert('Hello, ' + name + '!');
-}
-</script>
 </html>
