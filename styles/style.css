@@ -20,6 +20,9 @@ a {
 }
 
 header {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     background-color: #000000;
@@ -43,6 +46,12 @@ footer {
 #banner {
     width: 400;
     height: 400px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover;
 }
 
 .input {
@@ -140,6 +149,18 @@ footer {
 
     .apply-item {
         margin-bottom: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-image img {
+        object-fit: contain; /* Adjust as necessary for different devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-image img {
+        object-fit: contain; /* Adjust as necessary for different devices */
     }
 }
 
